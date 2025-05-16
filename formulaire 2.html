@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enregistrement des étudiants</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    form {
+      background-color: #fff;
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 1.6em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    label {
+      display: inline-block;
+      width: 160px;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: calc(100% - 170px);
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+
+    select {
+      background-color: #f9f9f9;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      resize: vertical;
+    }
+
+    .radio-group label {
+      margin-right: 20px;
+      font-weight: normal;
+    }
+
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    input[type="submit"] {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+
+    .form-section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <form method="post" action="traitement.php">
+    <div class="form-section">
+      <p>Enregistrement des étudiants</p>
+      <h1>État civil</h1>
+
+      <label for="nom">NOM:</label>
+      <input type="text" name="nom" id="nom"><br>
+
+      <label for="prenoms">Prénoms:</label>
+      <input type="text" name="prenoms" id="prenoms"><br>
+
+      <label for="dateNaissance">Date de naissance:</label>
+      <input type="text" name="date de naissance" id="dateNaissance"><br>
+
+      <label for="email">E-mail:</label>
+      <input type="email" name="e-mail" id="email"><br>
+
+      <label for="sexe">Sexe:</label>
+      <select name="sexe" id="sexe">
+        <option value="">-- Sélectionnez --</option>
+        <option value="Masculin">Masculin</option>
+        <option value="Féminin">Féminin</option>
+        <option value="Transgenre">Transgenre</option>
+      </select><br>
+
+      <label for="contact">Contact:</label>
+      <input type="text" name="contact" id="contact"><br>
+    </div>
+
+    <div class="form-section">
+      <h1>Diplômes</h1>
+
+      <label for="cep">CEP:</label>
+      <input type="text" name="cep" id="cep"><br>
+
+      <label for="bepc">BEPC:</label>
+      <input type="text" name="bepc" id="bepc"><br>
+
+      <label for="bac">BAC:</label>
+      <input type="text" name="bac" id="bac"><br>
+
+      <label for="bts">BTS:</label>
+      <input type="text" name="bts" id="bts"><br>
+    </div>
+
+    <div class="form-section">
+      <h1>Votre commentaire</h1>
+      <label for="ameliorer">Suggestions / remarques :</label><br>
+      <textarea name="ameliorer" id="ameliorer"></textarea>
+    </div>
+
+    <div class="form-section">
+      <h1>Pays</h1>
+      <p>Veuillez indiquer votre pays :</p>
+      <div class="radio-group">
+        <input type="radio" name="pays" value="Benin" id="Benin">
+        <label for="Benin">Bénin</label>
+
+        <input type="radio" name="pays" value="Senegal" id="Senegal">
+        <label for="Senegal">Sénégal</label>
+
+        <input type="radio" name="pays" value="France" id="France">
+        <label for="France">France</label>
+      </div>
+    </div>
+
+    <input type="submit" value="Envoyer">
+  </form>
+    <div style="text-align: center; margin-top: 40px;">
+     <a href="formulaire1.html" style="margin-right: 20px; font-size: 1.1em;">⬅️ Page précédente</a>
+     
+    </div>
+
+</body>
+</html>
